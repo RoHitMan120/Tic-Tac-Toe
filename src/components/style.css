@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  align-items: center;
+
+  background-color: black;
+}
+
+/*------MAIN HEADER-------*/
+
+h1 {
+  text-align: center;
+
+  color: blueviolet;
+}
+
+.threeD {
+  color: aqua;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 0px;
+  margin-left: 40px;
+  transform: translate(0%, -50%);
+  font-size: 2.5em;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+  cursor: context-menu;
+  transition: 0.3s;
+  text-shadow: 1px 1px 0 blueviolet, 1px 2px 0 blueviolet, 1px 3px 0 blueviolet,
+    1px 4px 0 blueviolet, 1px 5px 0 blueviolet, 1px 6px 0 blueviolet,
+    1px 7px 0 blueviolet, 1px 8px 0 blueviolet, 5px 13px 15px black;
+}
+
+.threeD:hover {
+  transition: 0.3s;
+  transform: scale(1.1) translate(0%, -50%);
+  text-shadow: 1px -1px 0 orange, 1px -2px 0 orange, 1px -3px 0 orange,
+    1px -4px 0 orange, 1px -5px 0 orange, 1px -6px 0 orange, 1px -7px 0 orange,
+    1px -8px 0 orange, 5px -13px 15px black, 5px -13px 25px #808080;
+}
+
+/*------MASSAGE COMPONENT-------*/
+
+.msg {
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+  color: blueviolet;
+}
+
+.text-orange {
+  color: orange;
+}
+
+.text-green {
+  color: green;
+}
+
+/*.winner {
+  animation: scaleText 1.4s infinite;
+  @keyframes scaleText {
+    0% {
+      transform: 2.5rem;
+    }
+    50% {
+      font-size: 3.5rem;
+    }
+    100% {
+      font-size: 2.5rem;
+    }
+  }
+}*/
+
+/*------SQUARE COMPONENT-------*/
+
+.square {
+  position: relative;
+  padding: 25px;
+  border: none;
+  min-height: 70px;
+  min-width: 70px;
+  cursor: pointer;
+  outline: none;
+  background-color: black;
+}
+
+.txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+}
+
+/*------BOARD COMPONENT-------*/
+
+.board {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  margin: 25px auto;
+}
+
+.right-border {
+  border-right: 0.3em solid aqua;
+}
+
+.bottom-border {
+  border-bottom: 0.3em solid aqua;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-reset {
+  width: 8rem;
+  padding: 5px;
+  margin: 2rem;
+  font-size: 1rem;
+  color: blueviolet;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 2px solid orange;
+  background-color: black;
+  cursor: pointer;
+}
+
+.btn-reset:hover {
+  color: orange;
+  border-color: blueviolet;
+}
+
+/*------HISTORY COMPONENT------*/
+
+.history__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.history {
+  list-style: none;
+  padding-left: 0%;
+}
+
+.history li {
+  margin: 5px;
+}
+
+.history-btn {
+  width: 8rem;
+  padding: 5px;
+  border-radius: 10px;
+  color: aqua;
+  background-color: black;
+  cursor: pointer;
+  border: 1px solid blueviolet;
+}
+
+.history-btn:hover {
+  color: orange;
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    overflow-x: hidden;
+  }
+  .history-btn:hover {
+    color: blue;
+  }
+  .square {
+    min-height: 100px;
+    min-width: 100px;
+  }
+  .threeD {
+    color: aqua;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 0px;
+    margin-left: 40px;
+    font-size: 10rem;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    cursor: context-menu;
+  }
+}
